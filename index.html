@@ -2,145 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Apricitas Gifts N’ Bag Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apricitas – Fashion Store</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
-<body class="bg-pink-50 font-sans">
+<body class="bg-white text-gray-800 font-sans">
 
-<!-- Header -->
-<header class="flex items-center justify-between px-6 py-4 bg-white shadow-md relative z-50">
-  <!-- Logo -->
-  <div class="text-2xl font-semibold text-pink-600 italic tracking-wide">
-    𝓐𝓹𝓻𝓲𝓬𝓲𝓽𝓪𝓼
-  </div>
+  <!-- ====================== Header ====================== -->
+  <header class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center py-4">
+        <!-- Logo -->
+        <div class="text-2xl font-semibold text-pink-600 italic tracking-wider">
+          Apricitas
+        </div>
 
-  <!-- Desktop Menu -->
-  <nav class="hidden md:flex gap-8 text-gray-700 text-sm font-medium items-center">
-    <a href="#" class="flex items-center gap-2 hover:text-pink-500"><i class="fas fa-house-chimney"></i> Home</a>
-    <a href="#" class="flex items-center gap-2 hover:text-pink-500"><i class="fas fa-gem"></i> Collections</a>
-    <a href="#" class="flex items-center gap-2 hover:text-pink-500"><i class="fas fa-images"></i> Lookbook</a>
-    <a href="#" class="flex items-center gap-2 hover:text-pink-500"><i class="fas fa-user"></i> About</a>
-    <a href="#" class="flex items-center gap-2 hover:text-pink-500"><i class="fas fa-envelope"></i> Contact</a>
-  </nav>
+        <!-- Desktop Menu -->
+        <nav class="hidden md:flex space-x-8 text-sm font-medium">
+          <a href="#" class="text-gray-700 hover:text-pink-500 transition">Home</a>
+          <a href="#" class="text-gray-700 hover:text-pink-500 transition">Shop</a>
+          <a href="#" class="text-gray-700 hover:text-pink-500 transition">About</a>
+          <a href="#" class="text-gray-700 hover:text-pink-500 transition">Contact</a>
+        </nav>
 
-  <!-- Icons & Hamburger -->
-  <div class="flex items-center gap-4 md:gap-6">
-    <i class="fas fa-search text-pink-600 cursor-pointer"></i>
-    <i class="fas fa-heart text-pink-600 cursor-pointer"></i>
-    <i class="fas fa-bag-shopping text-pink-600 cursor-pointer"></i>
-
-    <!-- Hamburger Button -->
-    <button id="menuToggle" class="md:hidden text-pink-600 text-xl">
-      <i class="fas fa-bars"></i>
-    </button>
-  </div>
-</header>
-
-<!-- Mobile Menu -->
-<div id="mobileMenu" class="fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-40">
-  <div class="flex justify-end p-4">
-    <button id="closeMenu" class="text-2xl text-pink-600">
-      <i class="fas fa-times"></i>
-    </button>
-  </div>
-  <ul class="flex flex-col gap-6 px-6 text-gray-700 font-medium">
-    <li><a href="#" class="flex items-center gap-2"><i class="fas fa-house-chimney text-pink-500"></i> Home</a></li>
-    <li><a href="#" class="flex items-center gap-2"><i class="fas fa-gem text-pink-500"></i> Collections</a></li>
-    <li><a href="#" class="flex items-center gap-2"><i class="fas fa-images text-pink-500"></i> Lookbook</a></li>
-    <li><a href="#" class="flex items-center gap-2"><i class="fas fa-user text-pink-500"></i> About</a></li>
-    <li><a href="#" class="flex items-center gap-2"><i class="fas fa-envelope text-pink-500"></i> Contact</a></li>
-  </ul>
-</div>
-
-<!-- Overlay (optional blur/fade) -->
-<div id="overlay" class="fixed inset-0 bg-black bg-opacity-30 hidden z-30"></div>
-  <main>
-<section class="py-12 px-6 bg-pink-50">
-  <h2 class="text-2xl md:text-3xl font-bold text-pink-600 mb-8 text-center">Featured Picks</h2>
-
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-    <!-- Product Card Template -->
-    <div class="bg-white rounded-lg shadow-md overflow-hidden">
-      <img src="https://source.unsplash.com/featured/?fashion,bags" alt="Product Image" class="w-full h-60 object-cover"/>
-      <div class="p-4">
-        <h3 class="text-lg font-semibold text-gray-800">Apricitas Blush Tote</h3>
-        <button onclick="sendToWhatsApp('Apricitas Blush Tote', 'https://source.unsplash.com/featured/?fashion,bags')" 
-          class="mt-3 inline-flex items-center gap-2 px-4 py-2 bg-pink-600 text-white text-sm rounded hover:bg-pink-700 transition">
-          <i class="fab fa-whatsapp"></i> Get Now
-        </button>
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button id="mobileMenuButton" aria-label="Open Menu" class="text-pink-600 text-2xl focus:outline-none">
+            &#9776;
+          </button>
+        </div>
       </div>
     </div>
 
-    <!-- Clone this card with different keywords -->
-    <div class="bg-white rounded-lg shadow-md overflow-hidden">
-      <img src="https://source.unsplash.com/featured/?fashion,dress" alt="Product Image" class="w-full h-60 object-cover"/>
-      <div class="p-4">
-        <h3 class="text-lg font-semibold text-gray-800">Floral Midi Dress</h3>
-        <button onclick="sendToWhatsApp('Floral Midi Dress', 'https://source.unsplash.com/featured/?fashion,dress')" 
-          class="mt-3 inline-flex items-center gap-2 px-4 py-2 bg-pink-600 text-white text-sm rounded hover:bg-pink-700 transition">
-          <i class="fab fa-whatsapp"></i> Get Now
-        </button>
-      </div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden px-4 pb-4">
+      <nav class="flex flex-col space-y-3 text-sm font-medium">
+        <a href="#" class="text-gray-700 hover:text-pink-500 transition">Home</a>
+        <a href="#" class="text-gray-700 hover:text-pink-500 transition">Shop</a>
+        <a href="#" class="text-gray-700 hover:text-pink-500 transition">About</a>
+        <a href="#" class="text-gray-700 hover:text-pink-500 transition">Contact</a>
+      </nav>
     </div>
+  </header>
+  <!-- ==================== End Header ==================== -->
 
-    <div class="bg-white rounded-lg shadow-md overflow-hidden">
-      <img src="https://source.unsplash.com/featured/?luxury,handbag" alt="Product Image" class="w-full h-60 object-cover"/>
-      <div class="p-4">
-        <h3 class="text-lg font-semibold text-gray-800">Luxury Handbag</h3>
-        <button onclick="sendToWhatsApp('Luxury Handbag', 'https://source.unsplash.com/featured/?luxury,handbag')" 
-          class="mt-3 inline-flex items-center gap-2 px-4 py-2 bg-pink-600 text-white text-sm rounded hover:bg-pink-700 transition">
-          <i class="fab fa-whatsapp"></i> Get Now
-        </button>
-      </div>
-    </div>
+  <!-- ========== Hero Section (Insert here) ========== -->
+  <!-- <section id="hero">...</section> -->
 
-    <div class="bg-white rounded-lg shadow-md overflow-hidden">
-      <img src="https://source.unsplash.com/featured/?fashion,shoes" alt="Product Image" class="w-full h-60 object-cover"/>
-      <div class="p-4">
-        <h3 class="text-lg font-semibold text-gray-800">Rose Heels</h3>
-        <button onclick="sendToWhatsApp('Rose Heels', 'https://source.unsplash.com/featured/?fashion,shoes')" 
-          class="mt-3 inline-flex items-center gap-2 px-4 py-2 bg-pink-600 text-white text-sm rounded hover:bg-pink-700 transition">
-          <i class="fab fa-whatsapp"></i> Get Now
-        </button>
-      </div>
-    </div>
-  </div>
-</section>
-    
-    </main>
+  <!-- ======= Featured Products Section (Insert here) ======= -->
+  <!-- <section id="featured-products">...</section> -->
 
-<!-- JS -->
+  <!-- ========== Footer Section (Insert here) ========== -->
+  <!-- <footer>...</footer> -->
+
+  <!-- ============== Mobile Menu Toggle Script ============== -->
   <script>
-  function sendToWhatsApp(productName, imageUrl) {
-    const phoneNumber = '234XXXXXXXXXX'; // replace with actual number
-    const message = `Hello Apricitas! I'm interested in: ${productName} - ${imageUrl}`;
-    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    window.open(whatsappLink, '_blank');
-  }
-</script>
-<script>
-  const menuToggle = document.getElementById('menuToggle');
-  const mobileMenu = document.getElementById('mobileMenu');
-  const closeMenu = document.getElementById('closeMenu');
-  const overlay = document.getElementById('overlay');
+    const button = document.getElementById('mobileMenuButton');
+    const menu = document.getElementById('mobileMenu');
 
-  menuToggle.addEventListener('click', () => {
-    mobileMenu.classList.remove('translate-x-full');
-    overlay.classList.remove('hidden');
-  });
-
-  closeMenu.addEventListener('click', () => {
-    mobileMenu.classList.add('translate-x-full');
-    overlay.classList.add('hidden');
-  });
-
-  overlay.addEventListener('click', () => {
-    mobileMenu.classList.add('translate-x-full');
-    overlay.classList.add('hidden');
-  });
-</script>
+    button.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
 
 </body>
 </html>
