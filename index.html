@@ -5,6 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Apricitas – Fashion Store</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+  .animate-fadeInUp {
+    animation: fadeInUp 1s ease-out both;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+  <style>
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.sm\:animate-fadeSlideIn {
+  animation: fadeSlideIn 1s ease-out forwards;
+}
+</style>
+
 </head>
 <body class="bg-white text-gray-800 font-sans">
 
@@ -78,15 +111,227 @@
     </div>
   </div>
 </section>
+    <!--feayured section-->
+  <!-- ========== Featured Categories Section ========== -->
+<section id="featured-products" class="bg-white py-16 px-4">
+  <div class="max-w-7xl mx-auto">
+    <!-- Section title -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl sm:text-4xl font-bold text-pink-600">Shop by Category</h2>
+      <p class="text-gray-600 mt-2">Find your style in every collection we offer</p>
+    </div>
+
+    <!-- Animated container -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 group opacity-0 translate-y-12 sm:translate-x-[-20px] sm:animate-fadeSlideIn">
+      
+      <!-- Card 1 - Bags -->
+      <div class="relative group bg-white shadow-md overflow-hidden rounded-lg transition transform hover:-translate-y-1">
+        <img src="https://images.pexels.com/photos/1488463/pexels-photo-1488463.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Bags" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h2 class="text-lg font-semibold text-pink-600 mb-2">Bags</h2>
+          <p class="text-sm text-gray-600">Elegant handbags, totes, and clutches for every occasion.</p>
+        </div>
+        <!-- Hover Button -->
+        <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-end justify-center transition duration-500">
+          <a href="https://wa.me/234XXXXXXXXXX" target="_blank" class="mb-4 px-4 py-2 bg-white text-pink-600 font-semibold rounded-full text-sm hover:bg-pink-100 transition">
+            Get Now
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2 - Dresses -->
+      <div class="relative group bg-white shadow-md overflow-hidden rounded-lg transition transform hover:-translate-y-1">
+        <img src="https://images.pexels.com/photos/1488465/pexels-photo-1488465.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Dresses" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h2 class="text-lg font-semibold text-pink-600 mb-2">Dresses</h2>
+          <p class="text-sm text-gray-600">Stylish dresses that blend comfort and elegance effortlessly.</p>
+        </div>
+        <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-end justify-center transition duration-500">
+          <a href="https://wa.me/234XXXXXXXXXX" target="_blank" class="mb-4 px-4 py-2 bg-white text-pink-600 font-semibold rounded-full text-sm hover:bg-pink-100 transition">
+            Get Now
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 3 - Jewelry -->
+      <div class="relative group bg-white shadow-md overflow-hidden rounded-lg transition transform hover:-translate-y-1">
+        <img src="https://images.pexels.com/photos/1400166/pexels-photo-1400166.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Jewelry" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h2 class="text-lg font-semibold text-pink-600 mb-2">Jewelry</h2>
+          <p class="text-sm text-gray-600">Hand-picked pieces to elevate your outfit with shine and class.</p>
+        </div>
+        <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-end justify-center transition duration-500">
+          <a href="https://wa.me/234XXXXXXXXXX" target="_blank" class="mb-4 px-4 py-2 bg-white text-pink-600 font-semibold rounded-full text-sm hover:bg-pink-100 transition">
+            Get Now
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 4 - Accessories -->
+      <div class="relative group bg-white shadow-md overflow-hidden rounded-lg transition transform hover:-translate-y-1">
+        <img src="https://images.pexels.com/photos/1192604/pexels-photo-1192604.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="Accessories" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h2 class="text-lg font-semibold text-pink-600 mb-2">Accessories</h2>
+          <p class="text-sm text-gray-600">Belts, hats, scarves, and more to complete your unique look.</p>
+        </div>
+        <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 flex items-end justify-center transition duration-500">
+          <a href="https://wa.me/234XXXXXXXXXX" target="_blank" class="mb-4 px-4 py-2 bg-white text-pink-600 font-semibold rounded-full text-sm hover:bg-pink-100 transition">
+            Get Now
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- ========== Lifestyle Spotlight Section ========== -->
+<section class="bg-pink-50 py-20 px-4">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    
+    <!-- Carousel Side -->
+    <div class="relative w-full h-80 overflow-hidden rounded-lg shadow-lg">
+      <!-- Slides -->
+      <div class="absolute inset-0 transition-opacity duration-700 ease-in-out slide-show">
+        <img src="https://images.pexels.com/photos/6311398/pexels-photo-6311398.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="w-full h-full object-cover rounded-lg" alt="Fashion Slide 1">
+      </div>
+      <div class="absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out slide-show hidden">
+        <img src="https://images.pexels.com/photos/3771078/pexels-photo-3771078.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="w-full h-full object-cover rounded-lg" alt="Fashion Slide 2">
+      </div>
+      <div class="absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out slide-show hidden">
+        <img src="https://images.pexels.com/photos/6311415/pexels-photo-6311415.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" class="w-full h-full object-cover rounded-lg" alt="Fashion Slide 3">
+      </div>
+    </div>
+
+    <!-- Text Side -->
+    <div class="space-y-6 animate-fadeInUp">
+      <h2 class="text-3xl sm:text-4xl font-bold text-pink-700 leading-tight">Made for the Modern Muse</h2>
+      <p class="text-gray-700 text-base sm:text-lg leading-relaxed">
+        Apricitas celebrates individuality with collections designed to inspire confidence. From sleek bags to stunning dresses, every piece is crafted for the woman who defines her own elegance.
+      </p>
+      <p class="text-gray-600 text-sm">
+        Our pieces are curated to tell stories — bold, gentle, elegant. Step into your season of style with Apricitas.
+      </p>
+      <a href="#featured-products" class="inline-block px-5 py-2 mt-4 bg-pink-600 text-white rounded-full text-sm font-medium hover:bg-pink-700 transition">
+        Discover More
+      </a>
+    </div>
+  </div>
+</section>
+<!-- ========== Zigzag Promo Section ========== -->
+<section class="bg-white py-20 px-4">
+  <div class="max-w-7xl mx-auto space-y-16">
+
+    <!-- Row 1 -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <img src="https://images.pexels.com/photos/6311417/pexels-photo-6311417.jpeg?auto=compress&cs=tinysrgb&w=600" class="w-full rounded-lg shadow" alt="Promo 1">
+      <div class="space-y-3">
+        <h5 class="text-pink-500 uppercase tracking-wider font-medium text-sm">Limited Edition</h5>
+        <h2 class="text-2xl font-bold text-gray-900">Minimalism Meets Luxury</h2>
+        <p class="text-gray-700">Soft leather, refined stitching, and understated beauty come together in this exclusive release.</p>
+        <div class="space-x-4 mt-4">
+          <a href="#" class="px-5 py-2 bg-pink-600 text-white rounded-full text-sm hover:bg-pink-700">Shop Now</a>
+          <a href="https://wa.me/234XXXXXXXXXX" class="px-5 py-2 border border-pink-600 text-pink-600 rounded-full text-sm hover:bg-pink-50">Chat</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center md:flex-row-reverse">
+      <img src="https://images.pexels.com/photos/6311372/pexels-photo-6311372.jpeg?auto=compress&cs=tinysrgb&w=600" class="w-full rounded-lg shadow" alt="Promo 2">
+      <div class="space-y-3">
+        <h5 class="text-pink-500 uppercase tracking-wider font-medium text-sm">Signature Series</h5>
+        <h2 class="text-2xl font-bold text-gray-900">Define Your Signature Look</h2>
+        <p class="text-gray-700">Elevate everyday style with our new arrivals, designed to complement your individuality.</p>
+        <div class="space-x-4 mt-4">
+          <a href="#" class="px-5 py-2 bg-pink-600 text-white rounded-full text-sm hover:bg-pink-700">Browse All</a>
+          <a href="https://wa.me/234XXXXXXXXXX" class="px-5 py-2 border border-pink-600 text-pink-600 rounded-full text-sm hover:bg-pink-50">Talk to Stylist</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+  <!-- ========== Brand Feature Section ========== -->
+<section class="py-20 bg-pink-50 px-4">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+    
+    <!-- Image -->
+    <div>
+      <img src="https://images.pexels.com/photos/6311415/pexels-photo-6311415.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Brand Story" class="rounded-lg shadow-lg w-full h-auto">
+    </div>
+    
+    <!-- Text -->
+    <div class="space-y-5">
+      <h2 class="text-3xl font-bold text-pink-700">Fashion With a Purpose</h2>
+      <p class="text-gray-700 text-base leading-relaxed">
+        At Apricitas, each collection is a reflection of elegance and purpose. From design to delivery, we ensure every product brings out the uniqueness of every woman.
+      </p>
+      <a href="https://wa.me/234XXXXXXXXXX" class="inline-block bg-pink-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-pink-700 transition">
+        Talk to Us
+      </a>
+    </div>
+    
+  </div>
+</section>
+  <!-- ========== Contact + Footer Section ========== -->
+<section class="bg-pink-50 py-20 px-4">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
+
+    <!-- Contact Form -->
+    <div>
+      <h2 class="text-3xl font-bold text-pink-700 mb-6">Get In Touch</h2>
+      <form action="#" method="POST" class="space-y-6">
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+          <input type="text" placeholder="Your name" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-300" required>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+          <input type="email" placeholder="your@email.com" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-300" required>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+          <textarea rows="4" placeholder="Your message..." class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-300" required></textarea>
+        </div>
+        <button type="submit" class="bg-pink-600 text-white px-6 py-2 rounded-full hover:bg-pink-700 transition">
+          Send Message
+        </button>
+      </form>
+    </div>
+
+    <!-- Footer Info -->
+    <div class="flex flex-col justify-between">
+      <div>
+        <h3 class="text-xl font-semibold text-pink-700 mb-4">Apricitas Gifts N’ Bag Store</h3>
+        <p class="text-gray-600 mb-6">Curating elegance, style, and timeless pieces just for you. For quick orders or personalized assistance, connect with us directly.</p>
+        <div class="flex gap-4 items-center">
+          <a href="https://wa.me/234XXXXXXXXXX" class="text-pink-600 hover:text-pink-800 text-xl">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="#" class="text-pink-600 hover:text-pink-800 text-xl">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="mailto:hello@apricitas.com" class="text-pink-600 hover:text-pink-800 text-xl">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-10 border-t border-gray-200 pt-4 text-sm text-gray-500">
+        &copy; 2025 Apricitas. All rights reserved.
+      </div>
+    </div>
+
+  </div>
+</section>
 
 
-  <!-- ======= Featured Products Section (Insert here) ======= -->
-  <!-- <section id="featured-products">...</section> -->
 
-  <!-- ========== Footer Section (Insert here) ========== -->
-  <!-- <footer>...</footer> -->
+  
 
-  <!-- ============== Mobile Menu Toggle Script ============== -->
+
+
   <script>
     const button = document.getElementById('mobileMenuButton');
     const menu = document.getElementById('mobileMenu');
@@ -105,6 +350,24 @@
     slides[current].classList.remove('hidden');
   }, 4000);
 </script>
+
+  <script>
+  const spotlightSlides = document.querySelectorAll('.slide-show');
+  let currentSlide = 0;
+
+  setInterval(() => {
+    spotlightSlides[currentSlide].classList.add('hidden');
+    spotlightSlides[currentSlide].classList.remove('opacity-100');
+    spotlightSlides[currentSlide].classList.add('opacity-0');
+
+    currentSlide = (currentSlide + 1) % spotlightSlides.length;
+
+    spotlightSlides[currentSlide].classList.remove('hidden');
+    spotlightSlides[currentSlide].classList.add('opacity-100');
+    spotlightSlides[currentSlide].classList.remove('opacity-0');
+  }, 5000);
+</script>
+
 
 
 </body>
